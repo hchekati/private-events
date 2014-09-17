@@ -3,11 +3,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
-gem 'faker',                    '1.4.2'
+gem 'faker', '1.4.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: [:development, :test]
-gem 'pg',  '0.17.1', group: :production
+gem 'sqlite3',                   group: [:development, :test]
+gem 'pg',             '0.17.1',  group: :production
+gem 'rails_12factor', '0.0.2',   group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '3.2.0.0'
