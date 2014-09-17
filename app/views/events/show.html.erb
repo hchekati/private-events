@@ -1,0 +1,15 @@
+<% provide(:title, @event.title) %>
+
+<h1><%= @event.title %></h1>
+
+<p>Location: <%= @event.location %></p>
+<p>host at: <%= @event.date.strftime("%Y-%m-%d  %Z") %></p>
+
+<% if @event.attendees.count > 0 %>
+  <p><%= pluralize(@event.attendees.count, 'attendees') %></p>
+  <ol>
+    <% @event.attendees.each do |attendee| %>
+      <li><%= link_to attendee.name, attendee %></li>
+     <% end %>
+  </ol>
+<% end %>

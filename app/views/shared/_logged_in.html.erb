@@ -1,0 +1,9 @@
+<div class="center jumbotron">
+  <h1>Private Events</h1>
+  <h2>
+    Welcome back! <%= link_to current_user.name, current_user %>.<br/>
+    You can check all the <%= link_to 'Events', events_path %><br/>
+    Or you can <%= link_to 'Create', new_event_path %> your own one.
+  </h2>
+  <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+</div>

@@ -1,0 +1,7 @@
+<% provide(:title, 'All Events') %>
+
+<h1>All Events</h1>
+
+<%= render 'shared/events_table', events: Event.upcoming, table_title: "Upcoming Events: #{Event.upcoming.count}" %>
+
+<%= render 'shared/events_table', events: Event.past, table_title: "Past Events: #{Event.past.count}" %>

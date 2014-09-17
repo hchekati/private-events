@@ -1,0 +1,16 @@
+<% provide(:title, @user.name) %>
+
+<h1><%= @user.name %></h1>
+
+
+<% if @user.events.upcoming.any? %>
+  <%= render 'shared/events_table', events: @user.events.upcoming, table_title: "Upcoming Events: #{@user.events.upcoming.count}" %>
+<% end %>
+
+<% if @user.events.past.any? %>
+  <%= render 'shared/events_table', events: @user.events.past, table_title: "Past Events: #{@user.events.past.count}" %>
+<% end %>
+
+<% if @user.attended_events.any? %>
+  <%= render 'shared/events_table', events: @user.attended_events, table_title: "Events to Attend: #{@user.attended_events.count}" %>
+<% end %>
